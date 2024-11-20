@@ -7,6 +7,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #e4e4e4;
+}
+
 header {
     background-color: #f7b600;
     padding: 15px;
@@ -40,3 +44,81 @@ header > nav > a:hover {
     border-radius: 5px;
 }
 
+main {
+    width: 800px;
+    margin: 0px auto;
+    padding: 15px 0px;
+}
+
+section{
+    width: 590px;
+    float: left;
+}
+
+article {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    text-align: justify;
+}
+
+article > h2 {
+    color: #f7b600;
+}
+
+article > span.datapost {
+    font-size: 0.8em;
+   
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 1px solid #000000;
+}
+
+article > img {
+    width: 550px;
+}
+
+article > a, aside > div > div > a, aside > div > a {
+    color: #f7b600;
+    text-decoration: none;
+    padding: 8px 0px;
+}
+
+article > a:hover, aside > div > div > a:hover, aside > div > a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    width: 190px;
+    background-color: white;
+    float: right;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+aside > div > h3 {
+    color: #565656;
+    background-color: #ccc;
+    padding: 2px;
+    margin-bottom: 7px;
+}
+
+aside > div > div > p {
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+aside > div > a {
+    padding: 5px;
+}
+
+footer {
+    clear: both;
+    width: 800px;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    background-color: #ccc;
+    border: 1px solid #4e4e4e;
+}
