@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul a {
+
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+    background: #f7b600 url(imagens/menu.png) no-repeat left bottom;
+}
+
+a:hover {
+    background-position: right bottom;
+    color: white;
+    background-color: #f99200;
+}
+
+#home #navegacao .home a, #sobre #navegacao .sobre a, #servicos #navegacao .servicos a, #noticias #navegacao .noticias a, #contatos #navegacao .contatos a {
+    background-position: right bottom;
+    color: white;
+    background-color: #f99200;
+}
