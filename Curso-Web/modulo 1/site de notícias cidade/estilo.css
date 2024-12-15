@@ -8,6 +8,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: white url(imagens/fundo.png) repeat-x;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+
 }
 
 header {
@@ -76,9 +82,9 @@ body.fotos nav a#fotos {
 main {
     background: #d3d3d3;
     margin-top: 60px;
-    margin-left: 30px;
+    padding: 10px;
+    min-width: 750px;
     /*width: 88.6%;*/
-    
 }
 
 aside#lateral {
@@ -89,7 +95,7 @@ aside#lateral {
 }
 
 
- section#primario {
+section#primario {
     width: 270px;
     float: left;
     margin: 0px 0px 20px 195px;
