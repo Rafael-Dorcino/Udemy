@@ -98,13 +98,11 @@ aside#lateral {
 #duas-colunas section#primario {
     width: 555px;
     margin: 0px 0px 20px 195px;
-    background: #0400de;
 }
 
 #uma-colunas section#primario {
     width: 750px;
     margin: 0px 0px 20px 0px;
-    background: #0400de;
 }
 
 section#secundario {
@@ -189,6 +187,36 @@ h3 {
 .entrevista h3 {
     background: #de003e;
     color: white;
+}
+
+#lista-noticias li {
+    padding: 2px;
+    border-bottom: 1px solid #afafaf;
+    height: 62px;
+}
+
+#lista-noticias li a img {
+    float: left;
+    margin: 5px;
+}
+
+#lista-noticias li a {
+    text-decoration: none;
+}
+
+#lista-noticias li a h3 {
+    font-size: 0.8em;
+    padding: 0px;
+    color: #3e7ab9;
+}
+
+#lista-noticias li a p {
+    font-size: 0.7em;
+    color: black;
+}
+
+#lista-noticias li:hover {
+    background-color: #ccc;
 }
 
 footer {
