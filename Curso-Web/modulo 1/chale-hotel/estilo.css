@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #ede9cc;
+    background: #ede9cc url(imagens/bg-container.png) repeat-y top center;
     margin: 0px auto;
     min-width: 740px;
     max-width: 1180px;
@@ -87,4 +87,110 @@ a.reservar {
     color: #fff5b0;
     padding: 5px 10px;
     float: right;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul#navegacao {
+    float: left;
+}
+
+ul#navegacao a {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px;
+    color: #6e672c;
+    line-height: 30px;
+}
+
+ul#navegacao a:hover {
+    background: #fdf6be;
+    border-radius: 5px;
+}
+
+.depoimento {
+    width: 226px;
+    height: 164px;
+    float: right;
+}
+
+main {
+    background: url(imagens/bg-container.png) repeat-y center center;
+}
+
+main section#principal {
+    background: url(imagens/bg-area-principal.png) top left repeat-x;
+    float: left;
+    width: 50%;
+    padding: 15px 0px;
+}
+
+main section#lateral{
+    background: url(imagens/bg-area-lateral.png) top left repeat-x;
+    float: right;
+    width: 50%;
+    padding: 20px 0px;
+}
+
+.conteudo {
+    margin: 0px auto;
+    width: 90%;
+}
+
+h2 {
+    color: #7d7640;
+    font-size: 1.1em;
+    padding: 5px 0px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+ul.servicos {
+   
+    
+}
+
+.servicos li {
+    padding: 8px;
+    border-bottom: 2px solid #f3efcb;
+    height: 6em;
+}
+
+.servicos li a img {
+    float: left;
+    width: 150px;
+    margin-right: 7px;
+}
+
+.servicos li a h3 {
+    padding: 5px 0px;
+    font-size: 1em;
+    color: #7d7640;
+    background: url(imagens/ornamento.png) no-repeat center right;
+}
+
+.servicos li a p {
+    font-size: 0.8em;
+    color: black;
+}
+
+.servicos li:hover {
+    background-color: #f3efcb;
+    cursor: pointer;
+}
+
+footer {
+    clear: both;
+    padding: 16px;
+    background: white url(imagens/bg-rodape.png) repeat-x top;
+    color: #7d7640;
 }
