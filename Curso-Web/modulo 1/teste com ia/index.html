@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Consultoria | Contabilidade Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: lightgray;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #11114e;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    header button {
+      background-color: #f39c12;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background-color: #11114e;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-content {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-content.visible {
+      display: block;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 2rem;
+      border-left: 5px solid #f39c12;
+      margin-top: 2rem;
+      font-style: italic;
+    }
+
+    .faq {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    .faq p {
+      display: none;
+      margin-top: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .faq p.visible {
+      display: block;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    footer {
+      background-color: #11114e;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 2rem auto 0;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    form button {
+      background: #f39c12;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Finance Consultoria</h1>
+    <button onclick="scrollToForm()">Solicitar Orçamento</button>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h2>Soluções contábeis que falam a sua língua</h2>
+    <p>Sem surpresas no fim do mês. Contabilidade transparente, digital e próxima de você.</p>
+    <button onclick="scrollToForm()">Fale com um Contador</button>
+  </section>
+
+  <section data-aos="fade-right">
+    <h2>Por que nos escolher?</h2>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)" data-aos="zoom-in" data-aos-delay="100">Expertise e confiança<div class="card-content">Anos de experiência aliada à precisão técnica para oferecer segurança contábil total.</div></div>
+      <div class="card" onclick="toggleCard(this)" data-aos="zoom-in" data-aos-delay="200">Soluções personalizadas<div class="card-content">Cada cliente é único. Nossos serviços se adaptam às suas necessidades reais.</div></div>
+      <div class="card" onclick="toggleCard(this)" data-aos="zoom-in" data-aos-delay="300">Atendimento consultivo<div class="card-content">Converse com quem entende. Suporte humano e especializado, sempre disponível.</div></div>
+      <div class="card" onclick="toggleCard(this)" data-aos="zoom-in" data-aos-delay="400">Tecnologia integrada<div class="card-content">Tenha controle em tempo real com ferramentas digitais integradas ao seu negócio.</div></div>
+    </div>
+  </section>
+
+  <section data-aos="fade-left">
+    <h2>Serviços</h2>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)" data-aos="flip-left" data-aos-delay="100">Contabilidade Digital<div class="card-content">Processos 100% online para mais agilidade e menor burocracia.</div></div>
+      <div class="card" onclick="toggleCard(this)" data-aos="flip-left" data-aos-delay="200">Planejamento Tributário<div class="card-content">Pague menos impostos de forma legal e eficiente.</div></div>
+      <div class="card" onclick="toggleCard(this)" data-aos="flip-left" data-aos-delay="300">BPO Financeiro<div class="card-content">Terceirize suas finanças e foque no crescimento da empresa.</div></div>
+      <div class="card" onclick="toggleCard(this)" data-aos="flip-left" data-aos-delay="400">Abertura de Empresas<div class="card-content">Comece certo! Cuidamos de toda a burocracia para você empreender.</div></div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>O que nossos clientes dizem:</h2>
+    <div class="testimonial">
+      “A contabilidade me proporciona tranquilidade e me permite focar no crescimento da minha empresa.”<br>
+      <strong>Ana Souza – Empreendedora</strong>
+    </div>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <strong>Preciso trocar de contador para contratar vocês?</strong>
+      <p>Não necessariamente. Podemos fazer a transição de forma simples e sem interrupções.</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <strong>Como funciona o atendimento?</strong>
+      <p>Você terá acesso a um contador dedicado e atendimento digital pelo canal de sua preferência.</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <strong>Quais documentos são necessários para abrir empresa?</strong>
+      <p>RG, CPF, comprovante de endereço, contrato social e informações da empresa. Nós orientamos todo o processo.</p>
+    </div>
+  </section>
+
+  <section id="form" data-aos="fade-up">
+    <h2>Pronto para descomplicar sua contabilidade?</h2>
+    <p>Entre em contato para um orçamento personalizado.</p>
+    <form onsubmit="return submitForm(event)">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea rows="5" placeholder="Como podemos ajudar?" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage" style="margin-top: 1rem; color: green; text-align:center"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Contabate. Todos os direitos reservados.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      delay: 100
+    });
+
+    function scrollToForm() {
+      document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleFAQ(el) {
+      const p = el.querySelector('p');
+      const isVisible = p.classList.contains('visible');
+      if (isVisible) {
+        p.classList.remove('visible');
+        setTimeout(() => p.style.display = 'none', 300);
+      } else {
+        p.style.display = 'block';
+        requestAnimationFrame(() => p.classList.add('visible'));
+      }
+    }
+
+    function toggleCard(card) {
+      const content = card.querySelector('.card-content');
+      const isVisible = content.classList.contains('visible');
+      if (isVisible) {
+        content.classList.remove('visible');
+        setTimeout(() => content.style.display = 'none', 300);
+      } else {
+        content.style.display = 'block';
+        requestAnimationFrame(() => content.classList.add('visible'));
+      }
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      document.getElementById('formMessage').innerText = 'Mensagem enviada com sucesso! Em breve entraremos em contato.';
+      return false;
+    }
+  </script>
+</body>
+</html>
